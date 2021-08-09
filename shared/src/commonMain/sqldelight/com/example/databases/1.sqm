@@ -1,0 +1,10 @@
+ALTER TABLE TableB RENAME TO TempTableB;
+
+CREATE TABLE TableB(
+    bStuff TEXT NOT NULL,
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT
+);
+
+INSERT INTO TableB(bStuff,  id) SELECT bStuff, id FROM TempTableB;
+
+DROP TABLE TempTableB;

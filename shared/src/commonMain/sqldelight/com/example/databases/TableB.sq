@@ -1,0 +1,14 @@
+CREATE TABLE TableB(
+    bStuff TEXT NOT NULL,
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT
+);
+
+
+selectAll:
+SELECT * FROM TableB;
+
+selectById:
+SELECT * FROM TableB WHERE id = ?;
+
+insertB:
+INSERT OR REPLACE INTO TableB(id, bStuff) VALUES ?;

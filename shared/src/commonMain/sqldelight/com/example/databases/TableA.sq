@@ -1,0 +1,12 @@
+CREATE TABLE TableA (
+    name TEXT NOT NULL PRIMARY KEY,
+    number INTEGER NOT NULL,
+    bId INTEGER NOT NULL,
+    FOREIGN KEY (bId) REFERENCES TableB(id)
+);
+
+selectAll:
+SELECT * FROM TableA;
+
+insertA:
+INSERT OR REPLACE INTO TableA(name, number, bId) VALUES ?;
